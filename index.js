@@ -33,8 +33,9 @@ const puppeteer = require('puppeteer');
 	await page.goto(`https://www.instagram.com/${USERNAME}`);
 
 	await (await page.$('article a')).click();
-	await page.waitFor(1000);
+	await page.waitFor(2000);
 	await (await page.$$('button'))[5].click();
+	await (await page.$$('button'))[11].click();
 
 	// await browser.close();
 })();
